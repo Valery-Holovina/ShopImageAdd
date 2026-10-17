@@ -1,0 +1,30 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Form Test</title>
+</head>
+<body>
+   
+    <form action="/Product/Image" method="post">
+        @Html.AntiForgeryToken()
+
+        <label>Image URL</label>
+        <input type="text" name="ImageUrl" required />
+
+        <br /><br />
+
+        <label>Product ID</label>
+        <input type="number" name="ProductId" required />
+
+        <br /><br />
+
+        <button type="submit">Add Image</button>
+    </form>
+ 
+</body>
+</html>
